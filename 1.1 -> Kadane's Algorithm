@@ -1,13 +1,25 @@
 Largest sum contiguous subarray
 
-For using this algorithm you need to have one postive integer
+For using this algorithm you need to have one postive integer.
 
+Approch:
+------
+step1 -> include current element
+step2 -> update the ans and find the maxiSum
+step3 -> if sum < 0
+step4 -> update the sum to 0
+step5 -> return the maxiSum
+
+code:
+-----
 int getSubArraySum(int arr[],int n){
   int maxiSum = INT_MIN;
   int sum = 0;
   
   for(int i =0;i<n;i++){
+    
      sum = sum + arr[i];
+    
      maxiSum = max(sum,maxiSum);
      
      if(sum<0){
