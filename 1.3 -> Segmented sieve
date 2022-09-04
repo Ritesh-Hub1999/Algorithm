@@ -1,0 +1,27 @@
+GCD/HCF
+
+Algo:
+-----
+step 1: agr a 0 hua tho b return karenga
+step 2: agr b 0 hua tho a return karenga
+step 3: agr a equal nai h b ka and b equal nai h a ka
+        -> check a < b and b=b-a;
+        -> check a > b and a=a-b;
+        
+ int gcd(int a,int b){
+    if(a==0)
+        return b;
+        
+    if(b==0)
+        return a;
+    
+    while(a!=b){
+      if(a<b){
+        b = b-a;
+      }
+      else{
+        a = a-b; 
+      }
+    }
+ }
+
